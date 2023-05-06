@@ -67,6 +67,10 @@ flowchart LR
 | Database | 各種データの保管場所としてのDatabase<br>SQLでもJSONでもテキストでも |
 | 可視化ツール | 時系列データを表等にしてくれるツール<br>いわゆるBIツール、ダッシュボードツールと言われるもの |
 
+<!-- ### Components
+1台のPCでもできる。 -->
+
+
 ## Tools
 あくまで自分が使った時のバージョンなので、別バージョンだと動かないということはないと思います。このバージョンなら動く確認取れてますよってことです。
 - mqtt
@@ -77,8 +81,8 @@ flowchart LR
   - pymysql 1.0.3
 - 可視化ツール
   - grafana 9.5.1
-- python 3.10.6
-  - python-dotenv 1.0.0
+- python 3.7.3, 3.10.6
+  - python-dotenv 0.21.1, 1.0.0
 
 ## Demo
 grafanaでの可視化の様子
