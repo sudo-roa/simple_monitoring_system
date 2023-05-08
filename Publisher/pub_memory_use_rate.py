@@ -2,7 +2,7 @@ import paho.mqtt.client as mqtt
 from time import sleep
 import config
 
-MQTT_CLIENT = config.MQTT_CLIENT
+MQTT_BROKER = config.MQTT_BROKER
 MQTT_PORT = int(config.MQTT_PORT)
 MQTT_TOPIC = "/PC1/mem/rate"
 DATA_PATH = "/proc/meminfo"
@@ -15,7 +15,7 @@ def on_disconnect(client, userdata, rc):
         print("Unexpected disconnection.")
 
 def on_publish(client, userdata, mid):
-    print("{} : publish to {} [ {} ]".format(mid, MQTT_CLIENT, MQTT_TOPIC))
+    print("{} : publish to {} [ {} ]".format(mid, MQTT_BROKER, MQTT_TOPIC))
 
 def calc_mem_use_rate():
     with open(DATA_PATH) as f:
@@ -32,7 +32,7 @@ def main():
     client.on_disconnect = on_disconnect
     client.on_publish = on_publish
 
-    client.connect(MQTT_CLIENT, MQTT_PORT, 60)
+    client.connect(MQTT_BROKER, MQTT_PORT, 60)
     client.loop_start()
 
     while True:

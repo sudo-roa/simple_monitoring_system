@@ -1,11 +1,11 @@
 # simple_monitoring_system/Publisher
-簡易モニタリングシステムのpublisher
+簡易モニタリングシステムのpublisher<br>
 cloneしたリポジトリのPublisherディレクトリをお使いください。
 
 ## Overview
 pythonライブラリのpaho-mqttを利用したデータのpublishのサンプル。<br>
 ~~今回は簡単に定期的なデータを取得するために/proc/statからのcpuの情報をとってみようかなと思ったけど、ちょっとめんどくさそう。。。~~ <br>
-メモリの使用率とPC温度でとりあえずのサンプルを作ります。<br>
+メモリの使用率とPC温度でとりあえずのサンプルを作りました。<br>
 ハードウェアとOSの互換性(ドライバの有無等)によってセンサデータを取得できないこともあります。
 
 ## Settings
