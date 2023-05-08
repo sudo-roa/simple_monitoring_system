@@ -3,7 +3,27 @@
 cloneしたリポジトリのSubscriberディレクトリをお使いください。
 
 ## Overview
-
+pythonライブラリのpaho-mqttを利用したデータのsubscribeのサンプル。<br>
+PublisherからBrokerに送信されたデータをsubscribeするので、今回はPublisherのサンプルコードにあわせてメモリ使用率とハードウェア温度をsubscribeします。<br>
+subscribe後はデータベースにデータを追加します。<br>
 
 ## Settings
-python-dotenvを利用して
+
+
+## Sample code Description
+```python
+
+```
+
+### Get memory use rate
+
+
+### Get PC temperature
+
+
+## Reference
+- hoge
+- huga
+
+## Author
+[sudo-roa](https://github.com/sudo-roa)
