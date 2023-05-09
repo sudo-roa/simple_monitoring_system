@@ -10,7 +10,6 @@ SQL_HOST = config.SQL_HOST
 SQL_USER = config.SQL_USER
 SQL_PASSWORD = config.SQL_PASSWORD
 SQL_DB = config.SQL_DB
-#SQL_TABLE = config.SQL_TABLE
 
 def on_connect(client, userdata, flag, rc):
   print("Connected with result code " + str(rc))
