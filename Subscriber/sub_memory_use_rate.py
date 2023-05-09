@@ -5,7 +5,7 @@ import config
 
 MQTT_BROKER = config.MQTT_BROKER
 MQTT_PORT = int(config.MQTT_PORT)
-MQTT_TOPIC = "/PC1/hw/hoge/temp"
+MQTT_TOPIC = "/PC1/mem/rate"
 SQL_HOST = config.SQL_HOST
 SQL_USER = config.SQL_USER
 SQL_PASSWORD = config.SQL_PASSWORD
@@ -30,7 +30,7 @@ def on_message(client, userdata, msg):
 def set_mysql(topic, data):
   connection = pymysql.connect(host = SQL_HOST, user = SQL_USER, password = SQL_PASSWORD, db = SQL_DB, charset='utf8', cursorclass=pymysql.cursors.DictCursor)
   with connection.cursor() as cursor:
-    sql = "INSERT INTO `hw_temp`(data_topic, data_value, data_time) VALUES (%s, %s, %s)"
+    sql = "INSERT INTO `mem_use_rate`(data_topic, data_value, data_time) VALUES (%s, %s, %s)"
     r = cursor.execute(sql, (topic, float(data), datetime.now().strftime( '%Y-%m-%d %H:%M:%S' )))
     connection.commit()
 
